@@ -26,9 +26,10 @@ h3{font-size:1.25rem;font-weight:700;margin-bottom:.4rem}
 .top.scrolled{box-shadow:0 8px 24px -16px rgba(22,33,43,.5)}
 .brand{white-space:nowrap;display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none;margin-right:auto}
 .mark{display:grid;place-items:center;width:2rem;height:2rem;border-radius:.55rem;background:var(--red);color:#fff;font-size:1.1rem}
-.top nav{display:flex;gap:1.5rem}
-.top nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
-.top nav a:hover{color:var(--ink)}
+.top nav{display:flex;gap:.35rem}
+.top nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted);padding:.55rem 1rem;border-radius:.35rem;transition:background-color .2s ease,color .2s ease,transform .2s ease}
+.top nav a:hover,.top nav a:focus-visible{background:var(--red);color:#fff;transform:translateY(-2px)}
+.top nav a:active{transform:translateY(0)}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-weight:600;text-decoration:none;padding:.85rem 1.5rem;border-radius:999px;border:0;cursor:pointer;font:600 1rem var(--body);transition:background .2s,transform .2s}
@@ -160,7 +161,8 @@ footer{padding:2rem 1.25rem 5.5rem;text-align:center;color:var(--muted);font-siz
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .hero-car,.hero-in,.hero-car figcaption,.fab,.road::after{animation:none}
-  .btn,.car,.ico,.nav{transition:none}
+  .btn,.car,.ico,.nav,.top nav a{transition:none}
+  .top nav a:hover{transform:none}
   .js .reveal{opacity:1;transform:none;transition:none}
   .drive{display:none}
 }
